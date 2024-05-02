@@ -25,7 +25,7 @@ const FormComponent = () => {
     e.preventDefault();
     setLoading(true);
     try {
-        const response = await axios.post('http://localhost:8000/process_json_data', formData, {
+        const response = await axios.post('http://localhost:5000/process_json_data', formData, {
         responseType: 'blob',
       });
       const  downloadUrl = window.URL.createObjectURL(new Blob([response.data]));
